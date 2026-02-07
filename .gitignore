@@ -1,0 +1,14 @@
+# Ignorer l'environnement virtuel
+.venv/
+venv/
+env/
+
+# Ignorer les fichiers temporaires Python
+__pycache__/
+*.pyc
+
+# Ignorer les fichiers système Mac (si tu es sur Mac)
+.DS_Store
+
+# Ignorer les données brutes (si tu ne veux pas partager tes CSV sur GitHub)
+data/raw/
