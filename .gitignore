@@ -7,8 +7,6 @@ env/
 __pycache__/
 *.pyc
 
-# Ignorer les fichiers système Mac (si tu es sur Mac)
+# Ignorer les fichiers système Mac 
 .DS_Store
 
-# Ignorer les données brutes (si tu ne veux pas partager tes CSV sur GitHub)
-data/raw/
