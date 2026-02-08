@@ -5,7 +5,7 @@ import time
 import random
 
 # --- CONFIGURATION ---
-NOMBRE_PAGES = 50 # Tu peux remettre 50 maintenant que c'est sécurisé
+NOMBRE_PAGES = 74
 SAISON = 2023
 
 headers = {
@@ -15,7 +15,7 @@ headers = {
 all_transfers = []
 print(f"--- DÉMARRAGE DU SCRAPING (Liste des transferts) ---")
 
-for page in range(1, NOMBRE_PAGES + 1):
+for page in range(74, NOMBRE_PAGES + 1):
     url = f"https://www.transfermarkt.fr/transfers/saisontransfers/statistik/top/plus/1/galerie/0?saison_id={SAISON}&transferfenster=alle&land_id=&ausrichtung=&spielerposition_id=&altersklasse=&leihe=&page={page}"
     
     print(f"Lecture page {page}/{NOMBRE_PAGES}...", end="\r")
@@ -98,5 +98,5 @@ df = pd.DataFrame(all_transfers)
 df = df.drop_duplicates(subset=['URL_Profil'])
 
 print(f"\n✅ TERMINÉ ! {len(df)} joueurs récupérés.")
-print(df[['Nom', 'Age', 'Prix_Raw']].head(15)) # Affiche les 15 premiers pour vérifier Ramos
-df.to_csv('data/raw/transfers_large_dataset.csv', index=False)
+print(df[['Nom', 'Age', 'Prix_Raw']].head(15)) # Affiche les 15 premiers pour vérifier 
+df.to_csv('data/raw/transfers_large_dataset2.csv', index=False)
