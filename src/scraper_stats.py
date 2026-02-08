@@ -6,6 +6,7 @@ import random
 import re  # Pour nettoyer le texte avec des expressions régulières
 
 # 1. Charger la liste des joueurs (issue de l'étape 1)
+nombre_de_pages = 50
 try:
     df = pd.read_csv('data/raw/transfers_large_dataset.csv')
     print(f"Chargement de {len(df)} joueurs...")
@@ -116,7 +117,7 @@ df['Buts_22_23'] = buts
 df['Minutes_22_23'] = minutes_jouees
 
 # 4. Sauvegarde
-output_file = 'data/processed/transfers_with_stats_final.csv'
+output_file = 'data/processed/transfers_with_stats_final_.csv'
 df.to_csv(output_file, index=False)
 print(f"\n✅ Terminé ! Vérifie le fichier : {output_file}")
 print(df[['Nom', 'Age', 'Position']].head(5))
